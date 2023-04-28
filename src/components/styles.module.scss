@@ -1,0 +1,67 @@
+@import url(//fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap);
+
+$top_offset: 10rem;
+$background_color: #4bbbbcff;
+$background_img: url(../images/background-stars.svg);
+$header_color: rgb(183, 47, 74);
+
+* {
+  list-style-type: none;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 600;
+}
+
+.container {
+  //background-image: url(../images/back.jpg);
+  background: black;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    color: $header_color;
+    font-size: 130%;
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      height: 3rem;
+      position: sticky;
+      top: 0px;
+      color: inherit;
+      text-decoration: none;
+      word-break: break-all;
+    }
+  }
+}
+
+.top {
+  position: relative;
+  overflow: hidden;
+}
+
+#canvas {
+  position: fixed;
+  width: 100%;
+  background: $background_img;
+  height: 100%;
+
+  .star {
+    width: calc(100vw / 50);
+    height: auto;
+    position: absolute;
+  }
+}
+
+#back {
+  width: 105%;
+  position: fixed;
+  bottom: -5px;
+}
